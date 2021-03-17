@@ -1,19 +1,32 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
 @import url("font-awesome.min.css");
 @font-face {
-  font-family: "PT-Sans";
-  font-display: swap;
-  src: url("fonts/PT-Sans-Regular.eot");
-  src: local("☺"), url("fonts/PT-Sans-Regular.woff2") format("woff2"), url("fonts/PT-Sans-Regular.woff") format("woff"), url("fonts/PT-Sans-Regular.ttf") format("truetype"), url("fonts/PT-Sans-Regular.svg") format("svg");
+  font-family: "Rubik-Light";
+  src: url("fonts/Rubik-Light.eot");
+  src: local("☺"), url("fonts/Rubik-Light.woff") format("woff"), url("fonts/Rubik-Light.ttf") format("truetype"), url("fonts/Rubik-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-Regular";
+  src: url("fonts/Rubik-Regular.eot");
+  src: local("☺"), url("fonts/Rubik-Regular.woff") format("woff"), url("fonts/Rubik-Regular.ttf") format("truetype"), url("fonts/Rubik-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "PT-Sans";
-  font-display: swap;
-  src: url("fonts/PT-Sans-Bold.eot");
-  src: local("☺"), url("fonts/PT-Sans-Bold.woff2") format("woff2"), url("fonts/PT-Sans-Bold.woff") format("woff"), url("fonts/PT-Sans-Bold.ttf") format("truetype"), url("fonts/PT-Sans-Bold.svg") format("svg");
-  font-weight: 600;
+  font-family: "Rubik-Medium";
+  src: url("fonts/Rubik-Medium.eot");
+  src: local("☺"), url("fonts/Rubik-Medium.woff") format("woff"), url("fonts/Rubik-Medium.ttf") format("truetype"), url("fonts/Rubik-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-Bold";
+  src: url("fonts/Rubik-Bold.eot");
+  src: local("☺"), url("fonts/Rubik-Bold.woff") format("woff"), url("fonts/Rubik-Bold.ttf") format("truetype"), url("fonts/Rubik-Bold.svg") format("svg");
+  font-weight: 700;
   font-style: normal;
 }
 ::-webkit-input-placeholder {
@@ -43,7 +56,7 @@
 
 html, body {
   height: 100%;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Rubik", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 body {
@@ -98,7 +111,7 @@ h1 {
   font-family: inherit;
   font-size: 45px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
   color: inherit;
   text-align: center;
   text-transform: uppercase;
@@ -114,7 +127,7 @@ h2, h3, p.title {
   font-family: inherit;
   font-size: 44px;
   line-height: 44px;
-  font-weight: 600;
+  font-weight: 700;
   color: inherit;
   text-align: center;
   text-transform: uppercase;
@@ -130,7 +143,7 @@ p.subtitle {
   font-family: inherit;
   font-size: 30px;
   line-height: 35px;
-  font-weight: 600;
+  font-weight: 500;
   color: inherit;
   text-align: center;
   margin: 0 0 60px;
@@ -201,24 +214,22 @@ p.subtitle {
 
 .button {
   display: inline-block;
-  font-family: "PT-Sans", Arial, sans-serif;
+  font-family: "Rubik", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
+  background-color: transparent;
   padding: 15px;
-  background: #1A6647;
   text-align: center;
   cursor: pointer;
   border: none;
   outline: none;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 4px;
 }
-
 .button:hover {
-  background: #008851;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .columns {
@@ -250,15 +261,69 @@ p.subtitle {
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "DINPro-Condensed", Arial, sans-serif;
+}
+
+.button_header {
+  padding: 10px 15px;
+  border: 1px solid #121222;
+  z-index: 2;
+}
+.button_header:hover {
+  background-color: #9a9ac7;
+}
+
+.header-contacts {
+  min-height: 160px;
+  background-color: #121222;
+  padding-top: 30px;
+}
+.header-contacts__contacts {
+  display: flex;
+}
+.header-contacts__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #ffffff;
+}
+.header-contacts__item {
+  padding-left: 40px;
+  margin-left: 35px;
+  position: relative;
+}
+.header-contacts__item:before {
+  content: "";
+  color: #ffffff;
+  font-family: FontAwesome;
+  font-size: 30px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+.header-contacts__item span {
+  display: block;
+  font-size: 16px;
+  color: #dd4f23;
+}
+.header-contacts_phone:before {
+  content: "";
+}
+.header-contacts_time:before {
+  content: "";
+}
+.header-contacts_email:before {
+  content: "";
 }
 
 .header {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
+  width: auto;
+  top: 120px;
+  left: 15%;
+  right: 15%;
   z-index: 50;
 }
 .header:before {
@@ -268,8 +333,7 @@ p.subtitle {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #121222;
-  opacity: 0.9;
+  background-color: #ffffff;
   z-index: 2;
 }
 
@@ -307,7 +371,7 @@ p.subtitle {
 }
 
 .header__link {
-  color: #fff;
+  color: #121222;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 16px;
