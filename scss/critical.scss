@@ -99,7 +99,7 @@ h1{
     font-family: inherit;
     font-size: 45px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 500;
     color: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -199,11 +199,10 @@ p.subtitle{
 .button { 
     display: inline-block;
     font-family: 'Rubik', Arial, sans-serif;
-    font-size: 21px;
+    font-size: 19px;
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
     color: #ffffff;
-    background-color: transparent;
     padding: 15px;
     text-align: center;
     cursor: pointer;
@@ -213,6 +212,14 @@ p.subtitle{
     text-decoration: none;
     &:hover {
         background-color: rgba(255, 255, 255, 0.3);
+    }
+    &_main {
+        background-color: #dd4f23;
+        border-radius: 4px;
+        color: #ffffff;
+        text-transform: none;
+        min-width: 300px;
+        margin-top: 60px;
     }
 }
 .columns{
@@ -496,9 +503,11 @@ p.subtitle{
     h1 {
         color: #ffffff;
         text-align: left;
+        margin-bottom: 60px;
     }
 }
 .features__item {
+    font-size: 20px;
     padding: 20px 20px;
     border-left: 3px solid #dd4f23;
     margin-top: 15px;
@@ -506,4 +515,12 @@ p.subtitle{
     max-width: 40%;
     color: #ffffff;
     text-transform: uppercase;
+    span {
+        font-size: 16px;
+        display: block;
+        margin-top: 20px;
+        text-transform: none;
+        padding-top: 15px;
+        border-top: 1px solid #f2f2f2;
+    }
 }
