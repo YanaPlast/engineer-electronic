@@ -253,14 +253,7 @@ p.subtitle{
     font-weight: 500;
     font-family: 'DINPro-Condensed', Arial, sans-serif;
 }
-.button_header {
-    padding: 10px 15px;
-    border: 1px solid #121222;
-    z-index: 2;
-    &:hover {
-        background-color: #9a9ac7;
-    }
-}
+
 // =========================== header-contacts ============================================
     .header-contacts {
         min-height: 160px;
@@ -315,12 +308,13 @@ p.subtitle{
     }
 // =========================== header ============================================
 .header {
-    position: fixed;
+    position: absolute;
     width: auto;
     top: 120px;
     left: 15%;
     right: 15%;
     z-index: 50;
+    padding: 0 30px;
     &:before {
         content: '';
         position: absolute;
@@ -331,6 +325,16 @@ p.subtitle{
         background-color: #ffffff;
         z-index: 2;
     }
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    &:before {
+        -webkit-box-shadow: 0px 0px 18px 8px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 18px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 18px 8px rgba(0, 0, 0, 0.2);
+    }
+    
 }
 .header__body {
     position: relative;
@@ -366,6 +370,15 @@ p.subtitle{
     text-transform: capitalize;
     text-decoration: none;
     font-size: 16px;
+}
+.button_header {
+    padding: 10px 15px;
+    color: #dd4f23; 
+    border: 1px solid #dd4f23;
+    z-index: 2;
+    &:hover {
+        background-color: #9a9ac7;
+    }
 }
 .content {
     padding-top: 100px;
@@ -484,4 +497,13 @@ p.subtitle{
         color: #ffffff;
         text-align: left;
     }
+}
+.features__item {
+    padding: 20px 20px;
+    border-left: 3px solid #dd4f23;
+    margin-top: 15px;
+    background-color: rgba(18, 18, 34, 0.7);
+    max-width: 40%;
+    color: #ffffff;
+    text-transform: uppercase;
 }
