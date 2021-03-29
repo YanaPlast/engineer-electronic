@@ -7,7 +7,7 @@
   font-weight: 500;
   padding: 50px 0 20px;
   position: relative;
-  margin-bottom: 20px; }
+  margin-bottom: 40px; }
   .section-title:after {
     content: '';
     position: absolute;
@@ -20,12 +20,16 @@
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
 
+.align-left {
+  text-align: left !important; }
+  .align-left:after {
+    left: 0 !important;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+
 .item {
-  background-color: #f1f1f1;
-  border-bottom: 3px solid #dd4f23;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding-left: 110px !important; }
+  background-color: #f1f1f1; }
   .item__title {
     font-weight: 500;
     font-size: 1.2rem;
@@ -56,6 +60,10 @@
   width: 50%;
   margin-bottom: 35px; }
   .spheres__column .item {
+    border-bottom: 3px solid #dd4f23;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 110px !important;
     background-repeat: no-repeat;
     background-position: top 30px left 20px; }
   .spheres__column:first-child .item {
@@ -66,3 +74,41 @@
     background-image: url(../images/spheres/spheres-icon-1.png); }
   .spheres__column:nth-child(4) .item {
     background-image: url(../images/spheres/spheres-icon-1.png); }
+
+.about__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+
+.about__img-container {
+  width: 50%;
+  background-image: url(../images/about_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover; }
+
+.about__text {
+  width: 50%;
+  max-width: 580px;
+  padding-left: 60px;
+  min-height: 500px;
+  text-align: left;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit; }
+  .about__text p {
+    margin-top: 20px; }
+
+.advantages {
+  background-color: #f1f1f1;
+  padding: 60px 0; }
+  .advantages .item-wrapper {
+    width: 33.333%; }
+    .advantages .item-wrapper .item {
+      background-color: #ffffff; }
