@@ -264,7 +264,8 @@ p.subtitle{
 // =========================== header-contacts ============================================
     .header-contacts {
         min-height: 160px;
-        background-color: #121222;
+        // background-color: #121222;
+        background-color: #26394e;
         padding-top: 30px;
         &__contacts {
             display: flex;
@@ -292,7 +293,8 @@ p.subtitle{
             span {
                 display: block;
                 font-size: 16px;
-                color: #dd4f23;
+                // color: #dd4f23;
+                color: #ff5722;
             }
         }
         &_phone {
@@ -509,9 +511,11 @@ p.subtitle{
 .features__item {
     font-size: 20px;
     padding: 20px 20px;
-    border-left: 3px solid #dd4f23;
+    // border-left: 3px solid #dd4f23;
+    border-left: 3px solid #ff5722;
     margin-top: 15px;
-    background-color: rgba(18, 18, 34, 0.7);
+    // background-color: rgba(18, 18, 34, 0.7);
+    background-color: rgba(38, 57, 78, 0.7);
     max-width: 40%;
     color: #ffffff;
     text-transform: uppercase;
